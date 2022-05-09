@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#" lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Meu desenho no canvas</title>
+    <meta property="og:title" content="Canvas"/>
+    <meta property="og:description" content="Desenho exibido com a  tag canvas"/>
+    <meta property="og:image" content="./images/meu desenho.svg">
+
+</head>
+<body>
+    <canvas id="idCanvas" width="450" height="450" style="border:1px solid #c3c3c3;">
+        Se seu navegador não suportar HTML5 você verá esta mensagem.
+     </canvas>
+
+     <script>
+     var c=document.getElementById("idCanvas");
+     var ctx=c.getContext("2d");
+     var img=new Image();
+     img.onload = function(){
+     ctx.drawImage(img,0,0);
+     };
+     img.src="./images/meu desenho.svg";
+
+     </script>
+     
+    
+ 
+</body>
+</html>
